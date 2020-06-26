@@ -1,0 +1,5 @@
+Ana;8;22;Tierra;Humano;
+Alejandro;6;14;Tierra;Humano;
+Monica;7;12;Tierra;Humano;
+Diego;8;17;Tierra;Humano;
+Jesus;9;18;Tierra;Humano;

@@ -1,2 +1,0 @@
-Monica;5;3;Sol;Amantó;
-Diego;4;3;Tierra;Amanto;

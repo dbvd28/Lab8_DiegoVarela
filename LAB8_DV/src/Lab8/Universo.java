@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author diego
  */
-public class Universo implements Polimorfismo{
+public class Universo implements Polimorfismo {
 
     private ArrayList<Seresv> vivos = new ArrayList();
     private File archivo = null;
@@ -44,77 +44,6 @@ public class Universo implements Polimorfismo{
     @Override
     public String toString() {
         return "Universo{" + "vivos=" + vivos + ", archivo=" + archivo + '}';
-    }
-
-  
-    public void modificarnombre(String n, String nuevo) throws IOException {
-        try {
-            cargarArchivo();
-            for (int i = 0; i < vivos.size(); i++) {
-                if (vivos.get(i).getNombre().equals(n)) {
-                    vivos.get(i).setNombre(nuevo);
-                }
-            }
-            escribirArchivo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void modificaraños(String n, int nuevo) throws IOException {
-        try {
-            cargarArchivo();
-            for (int i = 0; i < vivos.size(); i++) {
-                if (vivos.get(i).getNombre().equals(n)) {
-                    vivos.get(i).setAños(nuevo);
-                }
-            }
-            escribirArchivo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void modificarpoder(String n, int nuevo) throws IOException {
-        try {
-            cargarArchivo();
-            for (int i = 0; i < vivos.size(); i++) {
-                if (vivos.get(i).getNombre().equals(n)) {
-                    vivos.get(i).setPoder(nuevo);
-                }
-            }
-            escribirArchivo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void modificarplaneta(String n, String nuevo) throws IOException {
-        try {
-            cargarArchivo();
-            for (int i = 0; i < vivos.size(); i++) {
-                if (vivos.get(i).getNombre().equals(n)) {
-                    vivos.get(i).setPlaneta(nuevo);
-                }
-            }
-            escribirArchivo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void modificarraza(String n, String nuevo) throws IOException {
-        try {
-            cargarArchivo();
-            for (int i = 0; i < vivos.size(); i++) {
-                if (vivos.get(i).getNombre().equals(n)) {
-                    vivos.get(i).setRaza(nuevo);
-                }
-            }
-            escribirArchivo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void escribirArchivo() throws IOException {
@@ -159,7 +88,7 @@ public class Universo implements Polimorfismo{
 
     @Override
     public void Eliminar(String nombre) {
-     try {
+        try {
             cargarArchivo();
             int elim = 0;
             for (int i = 0; i < vivos.size(); i++) {
@@ -168,6 +97,81 @@ public class Universo implements Polimorfismo{
                 }
             }
             vivos.remove(elim);
+            escribirArchivo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void Modnombre(String nombre, String nuevo) {
+        try {
+            cargarArchivo();
+            for (int i = 0; i < vivos.size(); i++) {
+                if (vivos.get(i).getNombre().equals(nombre)) {
+                    vivos.get(i).setNombre(nuevo);
+                }
+            }
+            escribirArchivo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void Modplaneta(String nombre, String nuevo) {
+        try {
+            cargarArchivo();
+            for (int i = 0; i < vivos.size(); i++) {
+                if (vivos.get(i).getNombre().equals(nombre)) {
+                    vivos.get(i).setPlaneta(nuevo);
+                }
+            }
+            escribirArchivo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void Modraza(String nombre, String nuevo) {
+        try {
+            cargarArchivo();
+            for (int i = 0; i < vivos.size(); i++) {
+                if (vivos.get(i).getNombre().equals(nombre)) {
+                    vivos.get(i).setRaza(nuevo);
+                }
+            }
+            escribirArchivo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void Modaños(String nombre, int años) {
+        try {
+            cargarArchivo();
+            for (int i = 0; i < vivos.size(); i++) {
+                if (vivos.get(i).getNombre().equals(nombre)) {
+                    vivos.get(i).setAños(años);
+                }
+            }
+            escribirArchivo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void Modpoder(String nombre, int poder) {
+        try {
+            cargarArchivo();
+            for (int i = 0; i < vivos.size(); i++) {
+                if (vivos.get(i).getNombre().equals(nombre)) {
+                    vivos.get(i).setPoder(poder);
+                }
+            }
             escribirArchivo();
         } catch (Exception e) {
             e.printStackTrace();

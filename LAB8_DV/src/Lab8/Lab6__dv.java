@@ -551,7 +551,7 @@ public class Lab6__dv extends javax.swing.JFrame {
             p.cargarArchivo();
             String nombre = JOptionPane.showInputDialog(null, "Ingrese el nuevo nombre porfavor");
             Seresv v = (Seresv) cb_modsv.getSelectedItem();
-            p.modificarnombre(v.getNombre(), nombre);
+            p.Modnombre(v.getNombre(), nombre);
             v.setNombre(nombre);
 
             JOptionPane.showMessageDialog(null, "Se modifico con exito");
@@ -567,7 +567,7 @@ public class Lab6__dv extends javax.swing.JFrame {
             p.cargarArchivo();
             int años = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la nueva edad porfavor"));
             Seresv v = (Seresv) cb_modsv.getSelectedItem();
-            p.modificaraños(v.getNombre(), años);
+            p.Modaños(v.getNombre(), años);
             v.setAños(años);
             JOptionPane.showMessageDialog(null, "Se modifico con exito");
         } catch (Exception e) {
@@ -583,7 +583,7 @@ public class Lab6__dv extends javax.swing.JFrame {
             int poder = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el neuvo poder porfavor"));
             if ((poder >= 1) && (poder <= 10)) {
                 Seresv v = (Seresv) cb_modsv.getSelectedItem();
-                p.modificarpoder(v.getNombre(), poder);
+                p.Modpoder(v.getNombre(), poder);
                 v.setPoder(poder);
                 JOptionPane.showMessageDialog(null, "Se modifico con exito");
             } else {
@@ -601,7 +601,7 @@ public class Lab6__dv extends javax.swing.JFrame {
             p.cargarArchivo();
             String planeta = JOptionPane.showInputDialog(null, "Ingrese el nuevo planeta porfavor");
             Seresv v = (Seresv) cb_modsv.getSelectedItem();
-            p.modificarplaneta(v.getNombre(), planeta);
+            p.Modplaneta(v.getNombre(), planeta);
             v.setPlaneta(planeta);
             JOptionPane.showMessageDialog(null, "Se modifico con exito");
         } catch (Exception e) {
@@ -617,7 +617,7 @@ public class Lab6__dv extends javax.swing.JFrame {
             String raza = JOptionPane.showInputDialog(null, "Ingrese el nuevo planeta porfavor(Humano o Amanto)");
             if (raza.equals("Humano") || raza.equals("Amanto")) {
                 Seresv v = (Seresv) cb_modsv.getSelectedItem();
-                p.modificarraza(v.getNombre(), raza);
+                p.Modraza(v.getNombre(), raza);
                 v.setRaza(raza);
                 JOptionPane.showMessageDialog(null, "Se modifico con exito");
             } else {
